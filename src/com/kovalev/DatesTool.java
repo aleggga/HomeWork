@@ -6,8 +6,6 @@ import java.util.List;
 
 public class DatesTool {
     public static void main(String[] args) {
-        List<Integer> dates = new ArrayList<Integer>(Arrays.asList(1910, 1700, 1998, 2000, 2001, 200, 381, 45, 1000, 1001));
-
         System.out.println(dateToEpoch(1910));
         System.out.println(dateToEpoch(1700));
         System.out.println(dateToEpoch(1998));
