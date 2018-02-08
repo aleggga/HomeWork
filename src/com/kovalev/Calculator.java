@@ -3,6 +3,7 @@ package com.kovalev;
 public class Calculator {
 
     public static void main(String[] args) {
+        // HOMEWORK 1
         System.out.println(add(1,3));
         System.out.println(add(1.1,3.2));
         System.out.println(sub(4,3));
@@ -18,7 +19,13 @@ public class Calculator {
         System.out.println(pow(6));
         System.out.println(pow(10.54));
         System.out.println(percent(100, 10));
+
+        // HOMEWORK 2
+        System.out.println(castToLong(100.134));
     }
+
+
+    // HOMEWORK 1
 
     public static int add(int num1, int num2) {
         return num1 + num2;
@@ -79,4 +86,14 @@ public class Calculator {
     public static double percent(double num, double percent) {
         return num / 100 * percent;
     }
+
+    // HOMEWORK 2
+    public static long castToLong(double val) {
+        return (long) val;
+    }
+
+    public static byte checkSign(byte b) {
+        return b;
+    }
+
 }
