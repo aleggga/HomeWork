@@ -5,21 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class DatesTool {
-    public static void main(String[] args) {
-        List<Integer> dates = new ArrayList<Integer>(Arrays.asList(1910, 1700, 1998, 2000, 2001, 200, 381, 45, 1000, 1001));
-
-        System.out.println(dateToEpoch(1910));
-        System.out.println(dateToEpoch(1700));
-        System.out.println(dateToEpoch(1998));
-        System.out.println(dateToEpoch(2000));
-        System.out.println(dateToEpoch(2001));
-        System.out.println(dateToEpoch(200));
-        System.out.println(dateToEpoch(381));
-        System.out.println(dateToEpoch(45));
-        System.out.println(dateToEpoch(1000));
-        System.out.println(dateToEpoch(1001));
-    }
-
 
     public static int dateToEpoch(int date) {
         int minDate = 1;
@@ -38,5 +23,65 @@ public class DatesTool {
             epoch++;
         }
         return epoch;
+    }
+
+    public static String getSeasonByMonthNumIf(int month) {
+        String season = "";
+        if (month < 1 || month > 12) {
+            season = ("Unable to define the season. Month number should be in range 1-12");
+        } else if (month > 2 && month < 6) {
+            season = "Spring";
+        } else if (month > 5 && month < 9) {
+            season = "Summer";
+        } else if (month > 8 && month < 12) {
+            season = "Autumn";
+        } else {
+            season = "Winter";
+        }
+        return season;
+    }
+
+    public static String getSeasonByMonthNumSwitch(int month) {
+        String season = "";
+
+        switch (month) {
+            case 12:
+                return "Winter";
+
+            case 1:
+                return "Winter";
+
+            case 2:
+                return "Winter";
+
+            case 3:
+                return "Spring";
+
+            case 4:
+                return "Spring";
+
+            case 5:
+                return "Spring";
+
+            case 6:
+                return "Summer";
+
+            case 7:
+                return "Summer";
+
+            case 8:
+                return "Summer";
+
+            case 9:
+                return "Autumn";
+
+            case 10:
+                return "Autumn";
+
+            case 11:
+                return "Autumn";
+
+            default: return "Unable to define the season. Month number should be in range 1-12";
+        }
     }
 }

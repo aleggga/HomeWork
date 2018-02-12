@@ -2,29 +2,6 @@ package com.kovalev;
 
 public class Calculator {
 
-    public static void main(String[] args) {
-        // HOMEWORK 1
-        System.out.println(add(1,3));
-        System.out.println(add(1.1,3.2));
-        System.out.println(sub(4,3));
-        System.out.println(sub(4.1,3));
-        System.out.println(mul(1,3));
-        System.out.println(mul(5.43,3.23));
-        System.out.println(div(6,3));
-        System.out.println(div(10.57,3));
-        System.out.println(mod(6,3));
-        System.out.println(mod(10.54,3));
-        System.out.println(avg(6,3));
-        System.out.println(avg(10.54,3));
-        System.out.println(pow(6));
-        System.out.println(pow(10.54));
-        System.out.println(percent(100, 10));
-
-        // HOMEWORK 2
-        System.out.println(castToLong(100.134));
-    }
-
-
     // HOMEWORK 1
 
     public static int add(int num1, int num2) {
@@ -93,7 +70,39 @@ public class Calculator {
     }
 
     public static byte checkSign(byte b) {
+        System.out.println("checkSign method not ready yet");
         return b;
     }
 
+    public static int getSumOfDigitsFromNumber(int number) {
+        int sum = 0;
+
+        while(number != 0){
+            sum += (number % 10);
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public static int getFactorial(int number) {
+        int factorial = 1;
+
+        for (int i = 1; i < number; i++) {
+            factorial += factorial * i;
+        }
+        return factorial;
+    }
+
+    public static void multiply() {
+        int i = 1;
+        int j = 1;
+        while (i < 10) {
+            while ((j < 10)) {
+                System.out.println(i + " * " + j + " = " + i * j);
+                j++;
+            }
+            i++;
+            j = 1;
+        }
+    }
 }
