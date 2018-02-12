@@ -40,12 +40,12 @@ public class Start {
         }
 
 
-	    //Race.getRace();
-        //count10To0();
+	    Race.getRace();
+        count10To0();
         //EagleTails.getTailsOrEagles();
-        //System.out.println(Calculator.getSumOfDigitsFromNumber(234));
-        //System.out.println(Calculator.getFactorial(3));
-        //Calculator.multiply();
+        System.out.println(Calculator.getSumOfDigitsFromNumber(234));
+        System.out.println(Calculator.getFactorial(3));
+        Calculator.multiply();
     }
 
     public static void count10To0() {
