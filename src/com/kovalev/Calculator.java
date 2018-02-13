@@ -105,4 +105,21 @@ public class Calculator {
             j = 1;
         }
     }
+
+    public static boolean ifNumberPalendrom(int number) {
+        int arraySize = Integer.toString(number).length();
+        int[] arr = new int[arraySize];
+
+        for (int i = 0; number > 0; i++) {
+            arr[i] = number % 10;
+            number /= 10;
+        }
+
+        for (int i = 0, j = arraySize -1; i < arr.length / 2; i++, j--) {
+            if (arr[i] != arr[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
 }

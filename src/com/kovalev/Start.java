@@ -7,9 +7,21 @@ import java.util.List;
 public class Start {
 
     public static void main(String[] args) {
+        /// HomeWork 5 ///
+        // Определить является ли число палиндромом
+        System.out.println(Calculator.ifNumberPalendrom(123456)); // NO
+        System.out.println(Calculator.ifNumberPalendrom(123321)); // YES
+        System.out.println(Calculator.ifNumberPalendrom(9239329)); // YES
 
-        // HOMEWORK 1
-/*        System.out.println(Calculator.add(1,3));
+        // Двумерный массив 10х10, заполнить случайными числами от -20 до 20.
+
+        int[][] arr2 = ArrayTools.getArrayWithRandomValues(2,2,-20,20);
+        System.out.println(ArrayTools.getSummOfAllArrayElements(arr2));
+
+
+
+        /*// HOMEWORK 1
+        System.out.println(Calculator.add(1,3));
         System.out.println(Calculator.add(1.1,3.2));
         System.out.println(Calculator.sub(4,3));
         System.out.println(Calculator.sub(4.1,3));
@@ -26,17 +38,16 @@ public class Start {
         System.out.println(Calculator.percent(100, 10));
 
         // HOMEWORK 2
-        System.out.println(Calculator.castToLong(100.134));*/
+        System.out.println(Calculator.castToLong(100.134));
 
         // DateToEpoch
         List<Integer> dates = new ArrayList<Integer>(Arrays.asList(1910, 1700, 1998, 2000, 2001, 200, 381, 45, 1000, 1001));
         for (int a : dates) {
-            //System.out.println(DatesTool.dateToEpoch(a));
-            System.out.println(a + " = " + getCentury(a));
+            System.out.println(DatesTool.dateToEpoch(a));
         }
 
-        // getSeasonByMonthNumSwitch
-/*        for (int i = 0; i < 14; i++) {
+        //getSeasonByMonthNumSwitch
+        for (int i = 0; i < 14; i++) {
             System.out.println(i + " = " + DatesTool.getSeasonByMonthNumSwitch(i));
         }
 
