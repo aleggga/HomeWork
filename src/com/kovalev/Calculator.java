@@ -122,4 +122,20 @@ public class Calculator {
         }
         return true;
     }
+
+    public static void getIncrementedValues(int min, int max, int increment) {
+        while (min <= max) {
+            System.out.println(min);
+            min += increment;
+        }
+    }
+
+    public static void countDown(int start, int end) {
+        int i = 10;
+
+        do {
+            System.out.println(i);
+            i--;
+        } while (i != 0);
+    }
 }
