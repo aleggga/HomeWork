@@ -130,12 +130,10 @@ public class Calculator {
         }
     }
 
-    public static void countDown(int start, int end) {
-        int i = 10;
-
+    public static void countDown(int start, int end, int step) {
         do {
-            System.out.println(i);
-            i--;
-        } while (i != 0);
+            System.out.println(start);
+            start -= step;
+        } while (start >= end);
     }
 }
