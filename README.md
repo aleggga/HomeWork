@@ -1,14 +1,15 @@
-# HomeWork
-  public static void revertArray() {
-    int[] arr1 = {5,4,3,2,1};
-    int i = arr1.length;
-    int[] arr2 = new int[i];
-
-    for (int a : arr1) {
-      arr2[i -1] = a;
-      i--;
+private static int[] sortArr(int[] arr) {
+    boolean sorted = false;
+    while (!sorted) {
+      sorted = true;
+      for (int i = 0; i < arr.length - 1; i++) {
+        if (arr[i] > arr[i+1]) {
+          int a = arr[i];
+          arr[i] = arr[i + 1];
+          arr[i + 1] = a;
+          sorted = false;
+        }
+      }
     }
-    for (int a : arr2) {
-      System.out.println(a);
-    }
+    return arr;
   }
