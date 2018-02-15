@@ -1,3 +1,5 @@
+Arrays.toString(arr);
+
 private static int[] sortArr(int[] arr) {
     boolean sorted = false;
     while (!sorted) {
