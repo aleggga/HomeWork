@@ -1,5 +1,7 @@
 package com.kovalev;
 
+import java.util.Arrays;
+
 public class ArrayTools {
 
     // HomeWork5
@@ -141,5 +143,25 @@ public class ArrayTools {
 
         }
         return maxColumn;
+    }
+
+    public static boolean arrayMatch(char[] alpha, char[] betta, boolean fullMatch) {
+        boolean match;
+            for (char a : alpha) {
+                match = false;
+                for (char b : betta) {
+                    if (fullMatch) {
+                        if (a != b) {
+                            return false;
+                        }
+                    } else if (a == b) {
+                        match = true;
+                    }
+                }
+                if (!match) {
+                    return false;
+            }
+        }
+        return true;
     }
 }
