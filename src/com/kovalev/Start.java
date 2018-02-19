@@ -11,45 +11,41 @@ public class Start {
 
     public static void main(String[] args) {
 
+                /// HOMEWORK 1 ///
+        
+//Реализовать класс MyCalc для вещественных чисел (чисел с плавающей точкой) со следующим набором методов/функций:
+//        System.out.println(Calculator.add(1,3));
+//        System.out.println(Calculator.add(1.1,3.2));
+//        System.out.println(Calculator.sub(4,3));
+//        System.out.println(Calculator.sub(4.1,3));
+//        System.out.println(Calculator.mul(1,3));
+//        System.out.println(Calculator.mul(5.43,3.23));
+//        System.out.println(Calculator.div(6,3));
+//        System.out.println(Calculator.div(10.57,3));
+//        System.out.println(Calculator.mod(6,3));
+//        System.out.println(Calculator.mod(10.54,3));
+//        System.out.println(Calculator.avg(6,3));
+//        System.out.println(Calculator.avg(10.54,3));
+//        System.out.println(Calculator.pow(6));
+//        System.out.println(Calculator.pow(10.54));
+//        System.out.println(Calculator.percent(100, 10));
 
+                    /// HOMEWORK 2 ///
+            
+//        System.out.println(Calculator.castToLong(100.134));
 
-/*/// HOMEWORK 1 ///
-*//*
-Реализовать класс MyCalc для вещественных чисел (чисел с плавающей точкой) со следующим набором методов/функций:
-*//*
-        System.out.println(Calculator.add(1,3));
-        System.out.println(Calculator.add(1.1,3.2));
-        System.out.println(Calculator.sub(4,3));
-        System.out.println(Calculator.sub(4.1,3));
-        System.out.println(Calculator.mul(1,3));
-        System.out.println(Calculator.mul(5.43,3.23));
-        System.out.println(Calculator.div(6,3));
-        System.out.println(Calculator.div(10.57,3));
-        System.out.println(Calculator.mod(6,3));
-        System.out.println(Calculator.mod(10.54,3));
-        System.out.println(Calculator.avg(6,3));
-        System.out.println(Calculator.avg(10.54,3));
-        System.out.println(Calculator.pow(6));
-        System.out.println(Calculator.pow(10.54));
-        System.out.println(Calculator.percent(100, 10));*/
+        
+                    /// HOMEWORK 3 ///
+        
+//Написать функцию определения столетия по номеру года.
+//Диапазон возможных значений для года может лежать в пределах от 1 до 2018.
+//        List<Integer> dates = new ArrayList<Integer>(Arrays.asList(1910, 1700, 1998, 2000, 2001, 200, 381, 45, 1000, 1001));
+//        for (int a : dates) {
+//            System.out.println(DatesTool.dateToEpoch(a));
+//        }
 
-/*
-/// HOMEWORK 2 ///
-        System.out.println(Calculator.castToLong(100.134));
-*/
-
-
-/*/// HOMEWORK 3 ///
-*//*
-Написать функцию определения столетия по номеру года.
-Диапазон возможных значений для года может лежать в пределах от 1 до 2018.
-*//*
-        List<Integer> dates = new ArrayList<Integer>(Arrays.asList(1910, 1700, 1998, 2000, 2001, 200, 381, 45, 1000, 1001));
-        for (int a : dates) {
-            System.out.println(DatesTool.dateToEpoch(a));
-        }*/
-
-        /// HOMEWORK 4 ///
+                    /// HOMEWORK 4 ///
+            
 //a. Написать два варианта ф-ции определения сезона года по номеру месяца.
 //Первый вариант ф-ции должен использовать if .. else .. if оператор.
 //Второй вариант ф-ции должен использовать switch .. case.
@@ -80,7 +76,7 @@ public class Start {
 //Если "0.0", то немедленно выйти из цикла.
 
 
-//        EagleTails.getTailsOrEagles();
+//      EagleTails.getTailsOrEagles();
 
 //d. Организовать циклы do while обратного отсчета от 10 до 1 в выводом на экран.
 
@@ -106,15 +102,14 @@ public class Start {
 
         //Calculator.getIncrementedValues(10, 38, 2);
 
-        /// HomeWork 5 ///
-/*
 
-Определить является ли число палиндромом
+                    /// HomeWork 5 ///
+            
+//Определить является ли число палиндромом
+//        System.out.println(Calculator.ifNumberPalendrom(123456)); // NO
+//        System.out.println(Calculator.ifNumberPalendrom(123321)); // YES
+//        System.out.println(Calculator.ifNumberPalendrom(9239329)); // YES*/
 
-*/
-      /*  System.out.println(Calculator.ifNumberPalendrom(123456)); // NO
-        System.out.println(Calculator.ifNumberPalendrom(123321)); // YES
-        System.out.println(Calculator.ifNumberPalendrom(9239329)); // YES*/
 
 /*
 
@@ -186,5 +181,4 @@ d. Найти столбец матрицы с максимальной сумм
         System.out.println(ArrayTools.arrayMatch(alpha, betta, false));
 
     }
-
 }
