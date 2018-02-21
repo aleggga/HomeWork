@@ -1,5 +1,7 @@
 package com.kovalev;
 
+import transport.Ticket;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
