@@ -4,26 +4,34 @@ public class Vehicle {
 
     private String number;
     private int passengersCapacity;
+    private boolean standBy = true;
 
 
     void go() {
         System.out.println("vehicle is moving");
     }
 
-
-    public int getPassengersCapacity() {
+    int getPassengersCapacity() {
         return passengersCapacity;
     }
 
-    public void setPassengersCapacity(int passengersCapacity) {
+    void setPassengersCapacity(int passengersCapacity) {
         this.passengersCapacity = passengersCapacity;
     }
 
-    public String getNumber() {
+    String getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    void setNumber(String number) {
         this.number = number;
+    }
+
+    protected boolean isStandBy() {
+        return standBy;
+    }
+
+    void setStandBy(boolean standBy) {
+        this.standBy = standBy;
     }
 }

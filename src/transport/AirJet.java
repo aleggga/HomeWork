@@ -11,7 +11,7 @@ public class AirJet extends Vehicle {
     }
 
     @Override
-    public String getNumber() {
+    String getNumber() {
         return super.getNumber() + " (" + jetType + ")";
     }
 

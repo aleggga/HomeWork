@@ -1,17 +1,14 @@
 package com.kovalev;
 
-import transport.Ticket;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Start {
 
     static char[] alpha ={ 'a', 'b', 'c', 'd', 'e' };
     static char[] betta ={ 'e', 'b', 'c', 'd', 'a' };
 
     public static void main(String[] args) {
+
+        VehicleTools vehicleTools = new VehicleTools();
+        vehicleTools.go();
 
                 /// HOMEWORK 1 ///
         

@@ -15,8 +15,4 @@ public class Ticket {
         }
         System.out.println("\nAll tickets for " + a.getClass().getSimpleName() + " " + a.getNumber() + " are sold\n");
     }
-
-    protected void getTime(){
-        System.out.println("protected access example");
-    }
 }

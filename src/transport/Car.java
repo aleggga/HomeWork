@@ -18,19 +18,19 @@ public class Car extends Vehicle {
         return brand + "(" + carTypeExtended + ") with number: " + super.getNumber();
     }
 
-    public void setCarType(String carType) {
+    void setCarType(String carType) {
         this.carType = carType;
     }
 
-    public void setBrand(String brand) {
+    void setBrand(String brand) {
         this.brand = brand;
     }
 
-    public void setBusinessClass(boolean businessClass) {
+    void setBusinessClass(boolean businessClass) {
         this.businessClass = businessClass;
     }
 
-    private void startEngine() {
+    void startEngine() {
         System.out.println("Car: Starting engine .... Wjoooonnnn");
     }
 }

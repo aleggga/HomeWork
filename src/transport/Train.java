@@ -12,7 +12,7 @@ public class Train extends Vehicle {
     }
 
     @Override
-    public String getNumber() {
+    String getNumber() {
         return super.getNumber() + " (" + numberOfVagons + " vagons)";
     }
 

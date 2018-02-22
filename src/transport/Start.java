@@ -28,6 +28,7 @@ public class Start {
         for (Vehicle a : transport) {
             ticketMaster.sellTickets(a);
             a.go();
+            a.setStandBy(false);
             System.out.println("-------------------------------------------");
         }
     }
