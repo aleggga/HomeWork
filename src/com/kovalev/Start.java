@@ -1,5 +1,7 @@
 package com.kovalev;
 
+import Task9.ListChar;
+
 public class Start {
 
     static char[] alpha ={ 'a', 'b', 'c', 'd', 'e' };
@@ -7,8 +9,20 @@ public class Start {
 
     public static void main(String[] args) {
 
-        VehicleTools vehicleTools = new VehicleTools();
-        vehicleTools.go();
+        ListChar listChar1 = new ListChar(10);
+        listChar1.add('A');
+        listChar1.add('B');
+        listChar1.add('C');
+        ListChar listChar2 = new ListChar();
+        listChar2.add('A');
+        listChar2.add('B');
+        listChar2.add('C');
+        //listChar1.addAll(listChar2);
+        //listChar2.addAll(listChar1);
+        System.out.println(listChar1.equals(listChar2));
+
+        //VehicleTools vehicleTools = new VehicleTools();
+        //vehicleTools.go();
 
                 /// HOMEWORK 1 ///
         
@@ -166,8 +180,8 @@ d. Найти столбец матрицы с максимальной сумм
     При N = 30, сумма должна быть равна: ‘1395’.
 
     Note: Используйте для конечной суммы тип данных long.*/
-        System.out.println(RecursionTools.sumOfElements(1));
-        System.out.println(RecursionTools.sumOfElements(30));
+        //System.out.println(RecursionTools.sumOfElements(1));
+        //System.out.println(RecursionTools.sumOfElements(30));
 
 
     /*b.  Написать функцию сравнения двух одномерных массивов типа char.
@@ -176,8 +190,8 @@ d. Найти столбец матрицы с максимальной сумм
 
         // Arrays has same values, but different positions
         // boolean defines if position metters
-        System.out.println(ArrayTools.arrayMatch(alpha, betta, true));
-        System.out.println(ArrayTools.arrayMatch(alpha, betta, false));
+        //System.out.println(ArrayTools.arrayMatch(alpha, betta, true));
+        //System.out.println(ArrayTools.arrayMatch(alpha, betta, false));
 
     }
 }
