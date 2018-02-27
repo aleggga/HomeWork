@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class ListChar {
 
-    private char[] listChar;
+    protected char[] listChar;
 
     public ListChar(int size) {
         this.listChar = new char[size];
@@ -29,6 +29,7 @@ public class ListChar {
                 }
             }
         }
+        System.out.println(("Failed to add char: " + e));
         return false;
     }
 
@@ -71,9 +72,18 @@ public class ListChar {
         return false;
     }
 
-    public boolean equals(ListChar c) { // compare two ListChar
-        sort(true);
-        c.sort(true);
+    public boolean equals(Object obj) { // compare two ListChar
+        if (this == obj) {
+            return false;
+        }
+        if (!(obj instanceof ListChar)) {
+            return false;
+        }
+
+        ListChar c = (ListChar) obj;
+
+        sort(Direction.ASC);
+        c.sort(Direction.ASC);
 
         for (int i = 0; i < listChar.length; i++) {
             if (listChar[i] != c.get(i)) {
@@ -129,9 +139,9 @@ public class ListChar {
         return true;
     }
 
-    public void sort(boolean asc) { // sorting elements inside current list
+    public void sort(Direction direction) { // sorting elements inside current list
         for (int i = listChar.length - 1 ; i > 0 ; i--){
-            if (asc) {
+            if (direction == Direction.ASC) {
                 for (int j = 0 ; j < i ; j++) {
                     if (listChar[j] > listChar[j + 1]) {
                         char tmp = listChar[j];
