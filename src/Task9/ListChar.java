@@ -6,25 +6,31 @@ import java.util.Arrays;
 
 public class ListChar {
 
+    private int defaultListSize = 30;
     protected char[] listChar;
+    private int availableCapacity;
 
     public ListChar(int size) {
+
+        if (size < 1) {
+            return;
+        }
         this.listChar = new char[size];
+        availableCapacity = size;
     }
 
     public ListChar() {
-        this.listChar = new char[30];
+        this.listChar = new char[defaultListSize];
+        availableCapacity = defaultListSize;
     }
 
-    private boolean sizeAvailableForMethod(int sizeRequired) {
-        return listChar.length >= sizeRequired;
-    }
 
     public boolean add(char e) { // add a new char to list
-        if (sizeAvailableForMethod(1)) {
-            for (int i = 0; i < listChar.length; i++) {
-                if (listChar[i] == 0) {
-                    listChar[i] = e;
+        if (availableCapacity > 1) {
+            for (int i = 0; i < this.getFullSize(); i++) {
+                if (this.get(i) == 0) {
+                    this.set(i, e);
+                    availableCapacity--;
                     return true;
                 }
             }
@@ -34,24 +40,23 @@ public class ListChar {
     }
 
     public boolean set(int index, char c) { // set a char to a place located by the index
-        if (listChar.length > index) {
-            listChar[index] = c;
+        if (availableCapacity > index) {
+            this.set(index, c);
+            availableCapacity--;
             return true;
         }
         return false;
     }
 
     public char get(int index) { // get a code of char by the index or -1 in case element wasn't found by the index
-        return (sizeAvailableForMethod(index)) ? listChar[index] : 0;
+        return (this.getFullSize() > index) ? this.get(index) : 0;
     }
 
     public boolean contains(char c) { // true if list contains a char c
-        if (sizeAvailableForMethod(1)) {
-            for (char a : listChar) {
-                 if (a == c) {
-                     return true;
-                 }
-            }
+        for (char a : listChar) {
+             if (a == c) {
+                 return true;
+             }
         }
         return false;
     }
@@ -60,10 +65,11 @@ public class ListChar {
         if (getFreeSize() >= listChar1.getFullSize()) {
             int j = 0;
             for (int i = 0; i < listChar1.getFullSize(); i++) {
-                while (listChar[j] != '\u0000') {
+                while (this.get(j) != '\u0000') {
                     j++;
                 }
-                set(j, (char) listChar1.get(i));
+                this.set(j, (char) listChar1.get(i));
+                availableCapacity--;
             }
             System.out.println(Arrays.toString(listChar));
         }
@@ -82,11 +88,8 @@ public class ListChar {
 
         ListChar c = (ListChar) obj;
 
-        sort(Direction.ASC);
-        c.sort(Direction.ASC);
-
-        for (int i = 0; i < listChar.length; i++) {
-            if (listChar[i] != c.get(i)) {
+        for (int i = 0; i < this.getFullSize(); i++) {
+            if (this.get(i) != c.get(i)) {
                 return false;
             }
         }
@@ -94,13 +97,13 @@ public class ListChar {
     }
 
     public void clear() { // clear all elements of list
-        listChar = new char[30];
+        listChar = new char[defaultListSize];
     }
 
     public int indexOf(char c) { // return index of found element else if not then -1
-        if (sizeAvailableForMethod(1)) {
-            for (int i = 0; i < listChar.length; i++) {
-                if (listChar[i] == c) {
+        if (this.getFullSize() > 0) {
+            for (int i = 0; i < this.getFullSize(); i++) {
+                if (this.get(i) == c) {
                     return i;
                 }
             }
@@ -109,27 +112,19 @@ public class ListChar {
     }
 
     public int getFullSize() {  // return full size of all list
-        return listChar.length;
+        return this.getFullSize();
     }
 
     public int getFreeSize() { // return number of free elements of list
-        int emptyValues = 0;
-
-        for (char a : listChar) {
-            if (a == 0) {
-                emptyValues++;
-            }
-        }
-
-        return emptyValues;
+        return this.availableCapacity;
     }
 
     public int length1() { // return current size
-        return listChar.length - getFreeSize();
+        return this.getFullSize() - getFreeSize();
     }
 
     public boolean isEmpty() { // true, if list is empty
-        if (listChar.length > 0) {
+        if (this.getFullSize() > 0) {
             for (char a : listChar) {
                 if (a != '\u0000') {
                     return false;
@@ -140,21 +135,21 @@ public class ListChar {
     }
 
     public void sort(Direction direction) { // sorting elements inside current list
-        for (int i = listChar.length - 1 ; i > 0 ; i--){
+        for (int i = this.getFullSize() - 1 ; i > 0 ; i--){
             if (direction == Direction.ASC) {
                 for (int j = 0 ; j < i ; j++) {
-                    if (listChar[j] > listChar[j + 1]) {
-                        char tmp = listChar[j];
-                        listChar[j] = listChar[j + 1];
-                        listChar[j + 1] = tmp;
+                    if (this.get(j) > this.get(j + 1)) {
+                        char tmp = this.get(j);
+                        this.set(j, this.get(j + 1));
+                        this.set(j + 1, tmp);
                     }
                 }
             } else {
                 for (int j = 0 ; j < i ; j++) {
-                    if (listChar[j] < listChar[j + 1]) {
-                        char tmp = listChar[j];
-                        listChar[j] = listChar[j + 1];
-                        listChar[j + 1] = tmp;
+                    if (this.get(j) > this.get(j + 1)) {
+                        char tmp = this.get(j);
+                        this.set(j, this.get(j + 1));
+                        this.set(j + 1, tmp);
                     }
                 }
             }

@@ -23,7 +23,5 @@ public class Author {
         return dob;
     }
 
-    public Book createBook(String name, int numOfPages) {
-        return new Book(name, 357, this.name + ", " + this.surname);
-    }
+
 }

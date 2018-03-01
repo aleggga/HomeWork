@@ -96,7 +96,8 @@ public class BookShelf {
     void printBooksOnTheShelf() {
         for (Book a : books) {
             if (a != null) {
-                System.out.println("Shelf #" + this.getShelfNum() + ": " + a.getName());
+                System.out.println("Shelf #" + this.getShelfNum() + ": " + a.getName() + ", " + a.getAuthor().getName()
+                + ", " + a.getAuthor().getSurname() + ". Pages: " + a.getNumOfPages());
             }
 
         }

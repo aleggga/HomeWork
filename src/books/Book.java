@@ -3,12 +3,12 @@ package books;
 public class Book {
     private String name;
     private int numOfPages;
-    private String authorName;
+    private Author author;
 
-    public Book(String name, int numOfPages, String authorName) {
+    public Book(String name, int numOfPages, Author author) {
         this.name = name;
         this.numOfPages = numOfPages;
-        this.authorName = authorName;
+        this.author = author;
     }
 
     public String getName() {
@@ -19,8 +19,8 @@ public class Book {
         return numOfPages;
     }
 
-    public String getAuthorName() {
-        return authorName;
+    Author getAuthor() {
+        return this.author;
     }
 
     public boolean equals(Object obj) {
@@ -32,7 +32,7 @@ public class Book {
         }
 
         Book book = (Book) obj;
-        if (this.getAuthorName().equals(book.getAuthorName()) && this.getNumOfPages() == book.getNumOfPages() && this.getName().equals(book.getName())) {
+        if (this.author.getName().equals(book.author.getName()) && this.getNumOfPages() == book.getNumOfPages() && this.getName().equals(book.getName())) {
             return true;
         } else {
             return false;
