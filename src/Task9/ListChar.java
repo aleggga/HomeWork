@@ -41,7 +41,7 @@ public class ListChar {
 
     public boolean set(int index, char c) { // set a char to a place located by the index
         if (availableCapacity > index) {
-            this.set(index, c);
+            listChar[index] = c;
             availableCapacity--;
             return true;
         }
@@ -49,7 +49,7 @@ public class ListChar {
     }
 
     public char get(int index) { // get a code of char by the index or -1 in case element wasn't found by the index
-        return (this.getFullSize() > index) ? this.get(index) : 0;
+        return (this.getFullSize() > index) ? listChar[index] : 0;
     }
 
     public boolean contains(char c) { // true if list contains a char c
@@ -112,7 +112,7 @@ public class ListChar {
     }
 
     public int getFullSize() {  // return full size of all list
-        return this.getFullSize();
+        return listChar.length;
     }
 
     public int getFreeSize() { // return number of free elements of list
