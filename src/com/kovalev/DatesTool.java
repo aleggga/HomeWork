@@ -1,9 +1,5 @@
 package com.kovalev;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class DatesTool {
 
     public static int dateToEpoch(int date) {
@@ -83,5 +79,27 @@ public class DatesTool {
 
             default: return "Unable to define the season. Month number should be in range 1-12";
         }
+    }
+
+    public static void printNumOfDaysInMonth(int year, int month) {
+       int days = 0;
+        String monthName;
+
+       if (Month.getMonthNameByNum(month) == Month.FEBRUARY) {
+           if (year % 4 == 0 && year % 100 != 0 || year%400==0) {
+               days = 29;
+           } else {
+               days = 28;
+           }
+       } else {
+           days = Month.getDaysInMonth(month);
+       }
+        monthName = Month.getMonthNameByNum(month)
+                .toString()
+                .toLowerCase();
+        monthName = monthName.substring(0, 1)
+                .toUpperCase() + monthName.substring(1);
+
+        System.out.println(monthName + " " + year + " and " + days + " days");
     }
 }

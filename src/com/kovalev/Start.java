@@ -12,6 +12,8 @@ public class Start {
 
     public static void main(String[] args) {
 
+        DatesTool.printNumOfDaysInMonth(2000, 2);
+
         //VehicleTools vehicleTools = new VehicleTools();
         //vehicleTools.go();
 
