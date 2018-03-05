@@ -26,17 +26,17 @@ public class ListChar {
 
 
     public boolean add(char e) { // add a new char to list
-        if (availableCapacity > 1) {
-            for (int i = 0; i < this.getFullSize(); i++) {
-                if (this.get(i) == 0) {
-                    this.set(i, e);
-                    availableCapacity--;
-                    return true;
-                }
+        while (availableCapacity < 1) {
+            doubleArray();
+        }
+        for (int i = 0; i < this.getFullSize(); i++) {
+            if (this.get(i) == 0) {
+                this.set(i, e);
+                availableCapacity--;
+                return true;
             }
         }
-        System.out.println(("Failed to add char: " + e));
-        return false;
+        return true;
     }
 
     public boolean set(int index, char c) { // set a char to a place located by the index
@@ -61,21 +61,27 @@ public class ListChar {
         return false;
     }
 
-    public boolean addAll(ListChar listChar1) { // add all elements from another list
-        if (getFreeSize() >= listChar1.getFullSize()) {
-            int j = 0;
-            for (int i = 0; i < listChar1.getFullSize(); i++) {
-                while (this.get(j) != '\u0000') {
-                    j++;
-                }
-                this.set(j, (char) listChar1.get(i));
-                availableCapacity--;
-            }
-            System.out.println(Arrays.toString(listChar));
+    public boolean addAll(ListChar listToAdd) { // add all elements from another list
+        while (this.getFreeSize() < listToAdd.getFullSize()) {
+            doubleArray();
         }
-        System.out.println(Arrays.toString(listChar));
 
-        return false;
+        int j = 0;
+        for (int i = 0; i < listToAdd.getFullSize(); i++) {
+            while (this.get(j) != '\u0000') {
+                j++;
+            }
+            this.set(j, (char) listToAdd.get(i));
+        }
+
+        return true;
+    }
+
+    private void doubleArray() {
+        listChar = Arrays.copyOf(listChar, listChar.length * 2);
+        System.out.println(length1());
+        availableCapacity = listChar.length;
+        availableCapacity -= length1();
     }
 
     public boolean equals(Object obj) { // compare two ListChar

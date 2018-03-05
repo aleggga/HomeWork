@@ -21,15 +21,15 @@ public class ListCharExtended extends ListChar {
     }
 
     @Override
-    public boolean addAll(ListChar listChar1) {
-        for (int i = 0; i < listChar1.getFullSize(); i++) {
+    public boolean addAll(ListChar listToAdd) {
+        for (int i = 0; i < listToAdd.getFullSize(); i++) {
             for (int j = 0; j < this.getFullSize(); j++) {
-                if (this.get(j) == listChar1.get(i)){
+                if (this.get(j) == listToAdd.get(i)){
                     return false;
                 }
             }
         }
-        return super.addAll(listChar1);
+        return super.addAll(listToAdd);
     }
 
     public boolean listContains(char a) {
