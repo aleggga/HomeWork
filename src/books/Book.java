@@ -4,11 +4,13 @@ public class Book {
     private String name;
     private int numOfPages;
     private Author author;
+    private static int bookCounter = 0;
 
     public Book(String name, int numOfPages, Author author) {
         this.name = name;
         this.numOfPages = numOfPages;
         this.author = author;
+        bookCounter++;
     }
 
     public String getName() {
@@ -37,5 +39,9 @@ public class Book {
         } else {
             return false;
         }
+    }
+
+    public static void printBooksCreated() {
+        System.out.println("Books created: " + bookCounter);
     }
 }

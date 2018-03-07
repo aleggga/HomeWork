@@ -29,6 +29,8 @@ public class Start {
         shelf1.printBooksOnTheShelf();
         shelf2.printBooksOnTheShelf();
         shelf3.printBooksOnTheShelf();
+
+        Book.printBooksCreated();
     }
 
     private static Book createBook(String name, int pages, Author author) {
