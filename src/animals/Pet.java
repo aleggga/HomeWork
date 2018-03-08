@@ -4,20 +4,28 @@ public abstract class Pet extends Animal {
 
     private String name;
     private boolean isVaccinated;
-    private String voice = super.getVoice() + "my name is" + name;
+    private String voice = "my name is ";
 
 
-    public Pet(int id, int age, int weight, String color, String name, boolean isVaccinated) {
+    public Pet(int id, int age, double weight, String color, String name, boolean isVaccinated) {
         super(id, age, weight, color);
         this.name = name;
         this.isVaccinated = isVaccinated;
     }
 
-    public String getName() {
+    public void printName() {
+        System.out.println(getClass().getSimpleName() + " name: " + name);
+    }
+
+    public void printIsVaccinated() {
+        System.out.println(getClass().getSimpleName() + " isVaccinated: " + isVaccinated);
+    }
+
+    String getName() {
         return name;
     }
 
-    public boolean isVaccinated() {
+    boolean isVaccinated() {
         return isVaccinated;
     }
 
@@ -26,7 +34,12 @@ public abstract class Pet extends Animal {
     }
 
     @Override
+    String getVoice() {
+        return super.getVoice() + voice + name;
+    }
+
+    @Override
     public void voice() {
-        System.out.println(voice);
+        System.out.println(getVoice());
     }
 }

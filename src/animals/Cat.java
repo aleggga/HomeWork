@@ -7,6 +7,11 @@ public class Cat extends Pet {
     }
 
     @Override
+    String getVoice() {
+        return super.getVoice() + " myau...";
+    }
+
+    @Override
     public void voice() {
         System.out.println(getVoice());
     }

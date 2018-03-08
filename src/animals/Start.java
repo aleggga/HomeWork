@@ -5,23 +5,60 @@ public class Start {
         Cat cat = new Cat(1,2,3,"black", "Vas'ka", true);
         cat.voice();
         cat.getVoice();
-        System.out.println(cat.getAge());
-        System.out.println(cat.getColor());
-        System.out.println(cat.getId());
-        System.out.println(cat.getWeight());
-        System.out.println(cat.getName());
-        System.out.println(cat.isVaccinated());
+        cat.printAge();
+        cat.printColor();
+        cat.printId();
+        cat.printWeight();
+        cat.printName();
+        cat.printIsVaccinated();
         cat.setVaccinated(false);
-        System.out.println(cat.isVaccinated());
+        cat.printIsVaccinated();
 
         Volf volf = new Volf(27,4,23,"grey", true);
         //volf.setPredator(false);
-        System.out.println(volf.getAge());
-        System.out.println(volf.getColor());
-        System.out.println(volf.getId());
-        System.out.println(volf.getWeight());
+        volf.printAge();
+        volf.printColor();
+        volf.printId();
+        volf.printWeight();
         volf.voice();
-        System.out.println(volf.isPredator());
+        volf.printIsPredator();
 
+        Crocodile crocodile = new Crocodile(12, 4, 56, "green", true);
+        crocodile.printAge();
+        crocodile.printColor();
+        crocodile.printId();
+        crocodile.printIsPredator();
+        crocodile.printWeight();
+
+        Dog dog = new Dog(23, 1, 0.5, "brown", "Sam", false);
+        dog.voice();
+        dog.printAge();
+        dog.printColor();
+        dog.printId();
+        dog.printIsVaccinated();
+        dog.printName();dog.printWeight();
+
+        Fish fish = new Fish(213, 6, 0.01,"golden", "", false, "gurami");
+        fish.move();
+        fish.voice();
+        fish.printColor();
+        fish.printAge();
+        fish.printId();
+        fish.printIsVaccinated();
+        fish.printName();
+        fish.printWeight();
+
+        GuideDog guideDog = new GuideDog(232323, 9, 14.233, "black", "Bob",
+                true, true);
+        guideDog.printAge();
+        guideDog.printColor();
+        guideDog.printId();
+        guideDog.printIsVaccinated();
+        guideDog.printName();
+        guideDog.printWeight();
+        guideDog.takeOwnerHome();
+        guideDog.voice();
+
+        
     }
 }

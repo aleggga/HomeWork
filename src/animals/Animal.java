@@ -3,11 +3,11 @@ package animals;
 public abstract class Animal {
     private int id;
     private int age;
-    private int weight;
+    private double weight;
     private String color;
     private String voice = "Hello, ";
 
-    public Animal(int id, int age, int weight, String color) {
+    public Animal(int id, int age, double weight, String color) {
         this.id = id;
         this.age = age;
         this.weight = weight;
@@ -16,23 +16,41 @@ public abstract class Animal {
 
     public abstract void voice();
 
-    public int getId() {
+    String getVoice(){
+        return voice;
+    }
+
+    int getId() {
         return id;
     }
 
-    public int getAge() {
+    int getAge() {
         return age;
     }
 
-    public int getWeight() {
+    public void printId() {
+        System.out.println(getClass().getSimpleName() + " id: " + id);
+    }
+
+    public void printAge() {
+        System.out.println(getClass().getSimpleName() + " age: " + age);
+    }
+
+    double getWeight() {
         return weight;
     }
 
-    public String getColor() {
+    String getColor() {
         return color;
     }
 
-    String getVoice() {
-        return voice;
+    public void printWeight() {
+        System.out.println(getClass().getSimpleName() + " weight: " + weight);
     }
+
+
+    public void printColor() {
+        System.out.println(getClass().getSimpleName() + " color: " + color);
+    }
+
 }
