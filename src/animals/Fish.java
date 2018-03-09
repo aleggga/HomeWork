@@ -4,8 +4,8 @@ public class Fish extends Pet {
 
     private String type;
 
-    public Fish(int id, int age, double weight, String color, String name, boolean isVaccinated, String type) {
-        super(id, age, weight, color, name, isVaccinated);
+    public Fish(int age, double weight, String color, String name, boolean isVaccinated, String type) {
+        super(age, weight, color, name, isVaccinated);
         this.type = type;
     }
 

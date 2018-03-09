@@ -7,8 +7,8 @@ public abstract class Pet extends Animal {
     private String voice = "my name is ";
 
 
-    public Pet(int id, int age, double weight, String color, String name, boolean isVaccinated) {
-        super(id, age, weight, color);
+    public Pet(int age, double weight, String color, String name, boolean isVaccinated) {
+        super(age, weight, color);
         this.name = name;
         this.isVaccinated = isVaccinated;
     }

@@ -2,7 +2,7 @@ package animals;
 
 public class Start {
     public static void main(String[] args) {
-        Cat cat = new Cat(1,2,3,"black", "Vas'ka", true);
+        Cat cat = new Cat(2,3,"black", "Vas'ka", true);
         cat.voice();
         cat.getVoice();
         cat.printAge();
@@ -14,7 +14,7 @@ public class Start {
         cat.setVaccinated(false);
         cat.printIsVaccinated();
 
-        Volf volf = new Volf(27,4,23,"grey", true);
+        Volf volf = new Volf(4,23,"grey", true);
         //volf.setPredator(false);
         volf.printAge();
         volf.printColor();
@@ -23,14 +23,14 @@ public class Start {
         volf.voice();
         volf.printIsPredator();
 
-        Crocodile crocodile = new Crocodile(12, 4, 56, "green", true);
+        Crocodile crocodile = new Crocodile( 4, 56, "green", true);
         crocodile.printAge();
         crocodile.printColor();
         crocodile.printId();
         crocodile.printIsPredator();
         crocodile.printWeight();
 
-        Dog dog = new Dog(23, 1, 0.5, "brown", "Sam", false);
+        Dog dog = new Dog( 1, 0.5, "brown", "Sam", false);
         dog.voice();
         dog.printAge();
         dog.printColor();
@@ -38,7 +38,7 @@ public class Start {
         dog.printIsVaccinated();
         dog.printName();dog.printWeight();
 
-        Fish fish = new Fish(213, 6, 0.01,"golden", "", false, "gurami");
+        Fish fish = new Fish( 6, 0.01,"golden", "", false, "gurami");
         fish.move();
         fish.voice();
         fish.printColor();
@@ -48,7 +48,7 @@ public class Start {
         fish.printName();
         fish.printWeight();
 
-        GuideDog guideDog = new GuideDog(232323, 9, 14.233, "black", "Bob",
+        GuideDog guideDog = new GuideDog( 9, 14.233, "black", "Bob",
                 true, true);
         guideDog.printAge();
         guideDog.printColor();
@@ -59,6 +59,6 @@ public class Start {
         guideDog.takeOwnerHome();
         guideDog.voice();
 
-        
+
     }
 }

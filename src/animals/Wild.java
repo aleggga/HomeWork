@@ -2,8 +2,8 @@ package animals;
 
 public abstract class Wild extends Animal {
 
-    public Wild(int id, int age, double weight, String color, boolean isPredator) {
-        super(id, age, weight, color);
+    public Wild(int age, double weight, String color, boolean isPredator) {
+        super(age, weight, color);
         this.isPredator = isPredator;
     }
 
