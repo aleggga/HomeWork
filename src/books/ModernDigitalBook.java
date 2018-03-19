@@ -3,7 +3,7 @@ package books;
 public class ModernDigitalBook implements ModernDigital {
     @Override
     public void updateFirmWare() {
-        
+
     }
 
     @Override
